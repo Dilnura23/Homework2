@@ -13,14 +13,14 @@ let prob1 amount =
 
 /// Write a function `prob2` that computes GCD (Greatest Common Divisor) of two
 /// given integers. This function should return -1 if both inputs are 0.
-let number  =
+
    
-  let rec prob2  (a:int64) (b:int64) = 
-    if a=0 then b 
-    else if b =0 then a 
-    else if a =0 && b = 0 then -1
-    else  prob2 b (a % b)
-  prob2 360 210
+let rec prob2  (a:int64) (b:int64) = 
+  if a=0 then b 
+  else if b =0 then a 
+  else if a =0 && b = 0 then -1
+  else  prob2 b (a % b)
+prob2 360 210
   // let rec s:string n:integer = 
   //   if n>0 then s*n // REMOVE this line when you implement your own code
 
@@ -37,15 +37,21 @@ let prob3 s n =
 /// returns the smallest integral divisor of n that is greater than 1. For
 /// example, given 45, the function will return 3 (45 % 3 = 0). This function
 /// returns 0 for all error cases, e.g., when the given number is 1u.
-let prob4 (n: uint32) =
-  failwith "TODO" // REMOVE this line when you implement your own code
 
+let prob4 (n: uint32)  =
+   // REMOVE this line when you implement your own code
+  let y = 2u 
+  let rec eter n y =
+    if not (n%y= 0u) then eter n (y+1u)
+    else y
+  eter n y
+prob4 1688611u
 /// Write a function `prob5` that takes in an unsigned integer as input, and
 /// checks if the number is a prime number or not. If the number is prime, then
 /// the function returns true. Otherwise, it returns false. Hint: you can use
 /// the `prob4` function above.
 let prob5 (n: uint32) =
-  failwith "TODO" // REMOVE this line when you implement your own code
+  if n%// REMOVE this line when you implement your own code
 
 [<EntryPoint>]
 let main _args =
