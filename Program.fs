@@ -13,8 +13,16 @@ let prob1 amount =
 
 /// Write a function `prob2` that computes GCD (Greatest Common Divisor) of two
 /// given integers. This function should return -1 if both inputs are 0.
-let prob2 a b =
-  failwith "TODO" // REMOVE this line when you implement your own code
+let number  =
+   
+  let rec prob2  (a:int64) (b:int64) = 
+    if a=0 then b 
+    else if b =0 then a 
+    else if a =0 && b = 0 then -1
+    else  prob2 b (a % b)
+  prob2 360 210
+  // let rec s:string n:integer = 
+  //   if n>0 then s*n // REMOVE this line when you implement your own code
 
 /// Write a function `prob3` that takes in a string s and an integer n, and
 /// returns a string that repeats s for n times. For example, if "abc" and 3 are
